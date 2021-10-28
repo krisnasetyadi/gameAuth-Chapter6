@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css">
+    <link rel="stylesheet" href="./../publics/style.css">
+    <style>
+        body {
+            background-color: teal;
+        }
+        #content{
+            align-items: center;
+        }
+        ul li {
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+    <h1>Welcome to Dashboard <%= user %>  </h1>
+    <a href="/users/payment"><button>add payment</button></a>
+    <br><br><br><br><br>
+    <h3>What Game you wanna Play ?</h3>
+    <ul>
+        <li id="gameOne"><img src="./../publics/main-bg.jpg" alt=""
+            style="width: 250px; height: 150px;">    Rock Scissors Paper</li>
+        <li id="gameTwo"><img src="./../publics/rustt.jpg" alt="" 
+            style="width: 250px; height: 150px;">    RUST</li>
+        <li id="gameThree"><img src="./../publics/gta.jpg" alt=""
+            style="width: 250px; height: 150px;">     GRAND THEFT AUTO V</li>
+    </ul>
+
+    <a href="/users/login">Logout</a>
+    </div>
+</body>
+</html>

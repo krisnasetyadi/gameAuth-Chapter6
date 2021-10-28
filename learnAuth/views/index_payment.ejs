@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css">
+</head>
+<body>
+    <h1>PAYMENT</h1>
+<ul>
+    <% if(typeof errors != 'undefined') { %> <% errors.forEach(error =>{%> 
+    <li><%= error.message %> </li>
+      <% }) %> <% } %> 
+</ul>
+
+    <form action="/users/payment" method="POST">
+    <div>
+        <input 
+        type="text" 
+        id="firstname" 
+        name="firstname"
+        placeholder="last name" 
+        required>
+    </div>
+    <div>
+        <input 
+        type="text" 
+        id="lastname" 
+        name="lastname"
+        placeholder="last name" 
+        required>
+    </div>
+    <div>
+        <input 
+        type="password" 
+        id="cardnumber" 
+        name="cardnumber"
+        placeholder="card number" 
+        required>
+    </div>
+    <div>
+        <input 
+        type="password" 
+        id="cvvnumber" 
+        name="cvvnumber"
+        placeholder="cvv " 
+        required>
+    </div>
+    <div>
+        <input 
+        type="submit" value="Add payment">
+    </div>
+    <ul>
+        <li><input type="submit" name="update" id="update" value="update"></li>
+        <li><input type="submit" name="delete" id="delete" value="delete"></li>
+    </ul>
+    <a href="/users/dashboard">back</a>
+    </form>
+</body>
+</html>
